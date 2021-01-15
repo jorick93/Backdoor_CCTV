@@ -3,7 +3,6 @@
 # datum:        
 #
 # todo:
-# port knocking
 # update mechanisme
 # 
 # start scanNetworkPorts with multithreading (https://docs.python.org/3/library/threading.html)
@@ -25,12 +24,11 @@ def uploadToPastebin(title: str, text: str):
     #returns just the statuscode of the paste. If needed in future it can return the url or more.
     #now api username and password plain text (of test account) 
     PASTEFORMAT = "json"
-    KEY = 'xgBR9lnk16cN3zoI6zhr8QNXTF83KvHN'
-
+ 
     login_data = {
-        'api_dev_key': KEY,
-        'api_user_name': 'joricktest',
-        'api_user_password': 'CriAZoxHnT8W7zD%9S@9sepBfw@K'
+        'api_dev_key': 'api-key',
+        'api_user_name': 'username',
+        'api_user_password': 'password'
         }
     data = {
         'api_option': 'paste',
