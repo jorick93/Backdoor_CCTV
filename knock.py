@@ -13,6 +13,7 @@ import os, sys
 
 def knock(host, ports):
     try:
+        ## To Do
         for port in ports:
             print ("knock: " + port )
         print("Penny!")
