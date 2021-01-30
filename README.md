@@ -2,9 +2,9 @@
 
 
 Install software:
-•	Python versie 3.9.0
-•	Nmap versie 7.91
-•	Knockd versie 0.7-1
+- Python versie 3.9.0
+- Nmap versie 7.91
+- Knockd versie 0.7-1
 
 Python modules:
 - pip3 install netifaces
