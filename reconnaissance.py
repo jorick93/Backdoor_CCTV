@@ -59,7 +59,7 @@ def scanNetworkPorts(ipadress: str, netMask: int):
     outputFile = "nmap-output_" + netIp.replace(".","-").replace("/","_")
     command = "nmap -sS -oG {} {}".format(outputFile, netIp)
 
-    #test = subprocess.Popen(command, stdout=subprocess.PIPE).stdout.read()
+    test = subprocess.Popen(command, stdout=subprocess.PIPE).stdout.read()
     openHosts = []
     with open(outputFile, "r") as nmapOutput:
         for line in nmapOutput:
