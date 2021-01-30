@@ -3,12 +3,9 @@
 # datum:        
 #
 # todo:
-# update mechanisme
 # 
+# get hostname from device and put it into list (nice to have)
 # start scanNetworkPorts with multithreading (https://docs.python.org/3/library/threading.html)
-# make temp folder and put files like nmap output in it.
-# getInterfaceAdresses output sends just unique networks not unique ip adres
-
 
 import os
 import subprocess
@@ -24,11 +21,12 @@ def uploadToPastebin(title: str, text: str):
     #returns just the statuscode of the paste. If needed in future it can return the url or more.
     #now api username and password plain text (of test account) 
     PASTEFORMAT = "json"
- 
+    KEY = PASTEBINAPIKEY
+
     login_data = {
-        'api_dev_key': 'api-key',
-        'api_user_name': 'username',
-        'api_user_password': 'password'
+        'api_dev_key': KEY,
+        'api_user_name': USERNAME,
+        'api_user_password': PASSWORD
         }
     data = {
         'api_option': 'paste',
@@ -55,7 +53,6 @@ def scanNetworkPorts(ipadress: str, netMask: int):
     #Returns a list of dict's with ip and a list with open ports
     #
     #ToDo:
-    # get hostname from device and put it into list (nice to have)
     
     netIp = str(ipaddress.ip_network("{}/{}".format(ipadress,netMask), strict=False))
 
